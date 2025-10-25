@@ -1,12 +1,9 @@
-import { useState } from "react";
 import { BlobUnderlay } from "./Blob";
 import { TbBackground } from "react-icons/tb";
 
 import ShinyText from "./ShinyText";
 
 const Footer = () => {
-  const [mail, setMail] = useState<string>("");
-
   return (
     <div className="w-full p-3.5 relative">
       <BlobUnderlay className="absolute top-[50px] left-[-200px] z-0 !h-[500px]   !w-[400px]" />

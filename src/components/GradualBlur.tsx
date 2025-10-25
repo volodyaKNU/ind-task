@@ -1,10 +1,10 @@
 import React, {
-  CSSProperties,
+  type CSSProperties,
   useEffect,
   useRef,
   useState,
   useMemo,
-  PropsWithChildren,
+  type PropsWithChildren,
 } from "react";
 import * as math from "mathjs";
 

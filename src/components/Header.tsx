@@ -1,5 +1,4 @@
 import { TbBackground } from "react-icons/tb";
-import { IoPersonSharp } from "react-icons/io5";
 import CardNav from "./CardNav";
 import GradualBlur from "./GradualBlur";
 

@@ -6,12 +6,7 @@ import { BlobUnderlay } from "./components/Blob";
 import MagicBento from "./components/MagicBento";
 import LogoLoop from "./components/LogoLoop";
 import ClickSpark from "./components/ClickSpark";
-import {
-  SiReact,
-  SiNextdotjs,
-  SiTypescript,
-  SiTailwindcss,
-} from "react-icons/si";
+import { SiReact, SiNextdotjs } from "react-icons/si";
 import Footer from "./components/Footer";
 
 const techLogos = [
