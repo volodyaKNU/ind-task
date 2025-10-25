@@ -2,8 +2,10 @@ import { BlobUnderlay } from "./Blob";
 import { TbBackground } from "react-icons/tb";
 
 import ShinyText from "./ShinyText";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <div className="w-full p-3.5 relative">
       <BlobUnderlay className="absolute top-[50px] left-[-200px] z-0 !h-[500px]   !w-[400px]" />
@@ -32,7 +34,12 @@ const Footer = () => {
           <p className="text-white/60 cursor-pointer hover:text-[#d468fb]">
             Latest News
           </p>
-          <p className="text-white/60 cursor-pointer hover:text-[#d468fb]">
+          <p
+            className="text-white/60 cursor-pointer hover:text-[#d468fb]"
+            onClick={() => {
+              navigate("/about_us");
+            }}
+          >
             Meet the Team
           </p>
           <p className="text-white/60 cursor-pointer hover:text-[#d468fb]">

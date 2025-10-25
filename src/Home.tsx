@@ -86,260 +86,266 @@ const techLogos = [
   { node: <SiReact />, title: "React", href: "https://react.dev" },
 ];
 
-const Home = () => (
-  <div className="font-sans w-full max-w-screen overflow-hidden bg-[#060010]">
-    <ClickSpark
-      sparkColor="#fff"
-      sparkSize={10}
-      sparkRadius={15}
-      sparkCount={8}
-      duration={400}
-    >
-      <Header />
-      <div
-        style={{
-          maxWidth: "100vw",
-          overflow: "hidden",
-          width: "100%",
-          height: "100vh",
-          top: 0,
-          left: 0,
-          position: "relative",
-        }}
+const Home = () => {
+  return (
+    <div className="font-sans w-full max-w-screen overflow-hidden bg-[#060010]">
+      <ClickSpark
+        sparkColor="#fff"
+        sparkSize={10}
+        sparkRadius={15}
+        sparkCount={8}
+        duration={400}
       >
-        <GradientBlinds
-          gradientColors={["#FF9FFC", "#5227FF"]}
-          angle={124}
-          noise={0.08}
-          blindCount={28}
-          blindMinWidth={50}
-          spotlightRadius={0.6}
-          spotlightSoftness={1}
-          spotlightOpacity={1}
-          mouseDampening={0.15}
-          distortAmount={0}
-          shineDirection="left"
-          mixBlendMode="lighten"
-        />
-
-        <div className="w-full flex flex-col items-center justify-center absolute top-[55%] translate-y-[-50%] text-white pointer-events-none ">
-          <AnimatedContent
-            distance={150}
-            direction="vertical"
-            reverse
-            duration={1.2}
-            ease="power3.out"
-            initialOpacity={0.2}
-            animateOpacity
-            scale={1.1}
-            threshold={0.2}
-            delay={0.3}
-          >
-            <div className="flex gap-x-2 p-4 rounded-full items-center px-7 mb-5 backdrop-blur-md border-1 bg-white/5 border-[#625970]">
-              <TbBackground />
-              <div className="text-shadow-lg text-xl font-semibold">
-                Government structure
-              </div>
-            </div>
-          </AnimatedContent>
-          <AnimatedContent
-            distance={150}
-            direction="horizontal"
-            reverse={false}
-            duration={1.2}
-            ease="power3.out"
-            initialOpacity={0.2}
-            animateOpacity
-            scale={1.1}
-            threshold={0.2}
-            delay={0.3}
-          >
-            <div className="max-w-[1200px] text-8xl font-bold text-center text-shadow-lg">
-              .<span className="text-[#d468fb]">MANAGE</span> DOCUMENTS WITH OUR
-              SYSTEM FROM <span className="text-[#d468fb]">EVERYWHERE</span>!
-            </div>
-          </AnimatedContent>
-          <AnimatedContent
-            distance={150}
-            direction="vertical"
-            reverse={false}
-            duration={1.2}
-            ease="power3.out"
-            initialOpacity={0.2}
-            animateOpacity
-            scale={1.1}
-            threshold={0.2}
-            delay={0.3}
-          >
-            <div className="w-full p-10 pt-20 flex gap-36 justify-center">
-              <button className="text-shadow-lg text-2xl font-semibold pointer-events-auto rounded-full text-[#060010] backdrop-blur-sm  p-4 px-20 border-1 bg-white/80  cursor-pointer hover:bg-white/80 transition-all duration-300 hover:text-[#060010]">
-                Get Started
-              </button>
-              <button className=" text-shadow-lg text-2xl font-semibold pointer-events-auto rounded-full backdrop-blur-sm  p-4 px-20 border-1 bg-white/5 border-[#625970]  cursor-pointer hover:bg-white/80 transition-all duration-300 hover:text-[#060010]">
-                Learn More
-              </button>
-            </div>
-          </AnimatedContent>
-        </div>
-      </div>
-      <div className="max-w-screen h-fit bg-[#060010]">
-        <section
+        <Header />
+        <div
           style={{
-            position: "relative",
-            width: "100%",
+            maxWidth: "100vw",
             overflow: "hidden",
+            width: "100%",
+            height: "100vh",
+            top: 0,
+            left: 0,
+            position: "relative",
           }}
         >
-          <h2 className=" pt-24 text-white text-7xl font-bold text-center text-shadow-lg">
-            Our Services!
-          </h2>
-          <p className="text-white/65 text-center pt-7 pb-11 text-3xl">
-            Comprehensive municipal services for all residents
-          </p>
-          <div className="w-full  flex justify-center gap-12 pb-20 flex-wrap">
-            <BlobUnderlay className="absolute top-[150px] left-[120px] z-0   !w-[500px]" />
-            <BlobUnderlay className="absolute top-[300px] left-[55%] z-0  !w-[30vw]" />
-            <BlobUnderlay className="absolute top-[800px] left-[20%] z-0 !w-[30vw]" />
-            <BlobUnderlay className="absolute top-[1000px] right-[15%] z-0  !w-[30vw]" />
-            <div className="max-w-[500px] rounded-4xl flex flex-col justify-center items-center gap-8 text-[#060010] backdrop-blur-xl p-20 border-1  bg-white/5 border-[#625970]  ">
-              <div
-                className="bg-[#d468fb67] text-[50px] rounded-2xl px-4 py-2.5"
-                style={{
-                  boxShadow: "0px 0px 17px 0px #d468fb67",
-                }}
-              >
-                🏠
-              </div>
-              <h2 className="text-white font-bold text-3xl">
-                Housing & Property
-              </h2>
-              <p className="text-white/65 text-2xl text-center">
-                Registration, permits, property taxes, and housing support
-                programs.
-              </p>
-            </div>
-            <div className="max-w-[500px] rounded-4xl flex flex-col justify-center items-center gap-8 text-[#060010] backdrop-blur-xl p-20 border-1  bg-white/5 border-[#625970]  ">
-              <div
-                className="bg-[#d468fb67] text-[50px] rounded-2xl px-4 py-2.5"
-                style={{
-                  boxShadow: "0px 0px 17px 0px #d468fb67",
-                }}
-              >
-                🚗
-              </div>
-              <h2 className="text-white font-bold text-3xl">Transportation</h2>
-              <p className="text-white/65 text-2xl text-center">
-                Road maintenance, public transport, parking permits, and
-                infrastructure.
-              </p>
-            </div>
-            <div className="max-w-[500px] rounded-4xl flex flex-col justify-center items-center gap-8 text-[#060010] backdrop-blur-xl p-20 border-1  bg-white/5 border-[#625970]  ">
-              <div
-                className="bg-[#d468fb67] text-[50px] rounded-2xl px-4 py-2.5"
-                style={{
-                  boxShadow: "0px 0px 17px 0px #d468fb67",
-                }}
-              >
-                ♻️
-              </div>
-              <h2 className="text-white font-bold text-3xl">
-                Waste Management
-              </h2>
-              <p className="text-white/65 text-2xl text-center">
-                Garbage collection, recycling programs, and environmental
-                initiatives.
-              </p>
-            </div>
-            <div className="max-w-[500px] rounded-4xl flex flex-col justify-center items-center gap-8 text-[#060010] backdrop-blur-xl p-20 border-1  bg-white/5 border-[#625970]  ">
-              <div
-                className="bg-[#d468fb67] text-[50px] rounded-2xl px-4 py-2.5"
-                style={{
-                  boxShadow: "0px 0px 17px 0px #d468fb67",
-                }}
-              >
-                💧
-              </div>
-              <h2 className="text-white font-bold text-3xl">
-                Water & Utilities
-              </h2>
-              <p className="text-white/65 text-2xl text-center">
-                Water supply, sewage, utility connections, and maintenance
-                services.
-              </p>
-            </div>{" "}
-            <div className="max-w-[500px] rounded-4xl flex flex-col justify-center items-center gap-8 text-[#060010] backdrop-blur-xl p-20 border-1  bg-white/5 border-[#625970]  ">
-              <div
-                className="bg-[#d468fb67] text-[50px] rounded-2xl px-4 py-2.5"
-                style={{
-                  boxShadow: "0px 0px 17px 0px #d468fb67",
-                }}
-              >
-                🏫
-              </div>
-              <h2 className="text-white font-bold text-3xl">Education</h2>
-              <p className="text-white/65 text-2xl text-center">
-                Schools, libraries, educational programs, and youth activities.
-              </p>
-            </div>
-            <div className="max-w-[500px] rounded-4xl flex flex-col justify-center items-center gap-8 text-[#060010] backdrop-blur-xl p-20 border-1  bg-white/5 border-[#2d2c2d]  ">
-              <div
-                className="bg-[#d468fb67] text-[50px] rounded-2xl px-4 py-2.5"
-                style={{
-                  boxShadow: "0px 0px 17px 0px #d468fb67",
-                }}
-              >
-                🏥
-              </div>
-              <h2 className="text-white font-bold text-3xl">Healthcare</h2>
-              <p className="text-white/65 text-2xl text-center">
-                Medical facilities, emergency services, and health programs.
-              </p>
-            </div>
-          </div>
-
-          <h2 className=" pt-24 text-white text-7xl font-bold text-center text-shadow-lg pb-[100px]">
-            Our <span className="text-[#d468fb]">Impact</span>
-          </h2>
-          <MagicBento
-            textAutoHide={true}
-            enableStars={true}
-            enableSpotlight={true}
-            enableBorderGlow={true}
-            enableTilt={false}
-            enableMagnetism={false}
-            clickEffect={true}
-            spotlightRadius={300}
-            particleCount={12}
-            glowColor="132, 0, 255"
+          <GradientBlinds
+            gradientColors={["#FF9FFC", "#5227FF"]}
+            angle={124}
+            noise={0.08}
+            blindCount={28}
+            blindMinWidth={50}
+            spotlightRadius={0.6}
+            spotlightSoftness={1}
+            spotlightOpacity={1}
+            mouseDampening={0.15}
+            distortAmount={0}
+            shineDirection="left"
+            mixBlendMode="lighten"
           />
-        </section>
-        <div className="relative w-full pt-24 mb-32">
-          <div
+
+          <div className="w-full flex flex-col items-center justify-center absolute top-[55%] translate-y-[-50%] text-white pointer-events-none ">
+            <AnimatedContent
+              distance={150}
+              direction="vertical"
+              reverse
+              duration={1.2}
+              ease="power3.out"
+              initialOpacity={0.2}
+              animateOpacity
+              scale={1.1}
+              threshold={0.2}
+              delay={0.3}
+            >
+              <div className="flex gap-x-2 p-4 rounded-full items-center px-7 mb-5 backdrop-blur-md border-1 bg-white/5 border-[#625970]">
+                <TbBackground />
+                <div className="text-shadow-lg text-xl font-semibold">
+                  Government structure
+                </div>
+              </div>
+            </AnimatedContent>
+            <AnimatedContent
+              distance={150}
+              direction="horizontal"
+              reverse={false}
+              duration={1.2}
+              ease="power3.out"
+              initialOpacity={0.2}
+              animateOpacity
+              scale={1.1}
+              threshold={0.2}
+              delay={0.3}
+            >
+              <div className="max-w-[1200px] text-8xl font-bold text-center text-shadow-lg">
+                .<span className="text-[#d468fb]">MANAGE</span> DOCUMENTS WITH
+                OUR SYSTEM FROM{" "}
+                <span className="text-[#d468fb]">EVERYWHERE</span>!
+              </div>
+            </AnimatedContent>
+            <AnimatedContent
+              distance={150}
+              direction="vertical"
+              reverse={false}
+              duration={1.2}
+              ease="power3.out"
+              initialOpacity={0.2}
+              animateOpacity
+              scale={1.1}
+              threshold={0.2}
+              delay={0.3}
+            >
+              <div className="w-full p-10 pt-20 flex gap-36 justify-center">
+                <button className="text-shadow-lg text-2xl font-semibold pointer-events-auto rounded-full text-[#060010] backdrop-blur-sm  p-4 px-20 border-1 bg-white/80  cursor-pointer hover:bg-white/80 transition-all duration-300 hover:text-[#060010]">
+                  Get Started
+                </button>
+                <button className=" text-shadow-lg text-2xl font-semibold pointer-events-auto rounded-full backdrop-blur-sm  p-4 px-20 border-1 bg-white/5 border-[#625970]  cursor-pointer hover:bg-white/80 transition-all duration-300 hover:text-[#060010]">
+                  Learn More
+                </button>
+              </div>
+            </AnimatedContent>
+          </div>
+        </div>
+        <div className="max-w-screen h-fit bg-[#060010]">
+          <section
             style={{
-              width: "100vw",
-              position: "absolute",
+              position: "relative",
+              width: "100%",
               overflow: "hidden",
             }}
           >
-            <LogoLoop
-              logos={techLogos}
-              speed={120}
-              direction="left"
-              logoHeight={48}
-              gap={40}
-              pauseOnHover
-              scaleOnHover
-              fadeOut
-              fadeOutColor="#ffffff"
-              ariaLabel="Technology partners"
-            />
-          </div>
-        </div>
+            <h2 className=" pt-24 text-white text-7xl font-bold text-center text-shadow-lg">
+              Our Services!
+            </h2>
+            <p className="text-white/65 text-center pt-7 pb-11 text-3xl">
+              Comprehensive municipal services for all residents
+            </p>
+            <div className="w-full  flex justify-center gap-12 pb-20 flex-wrap">
+              <BlobUnderlay className="absolute top-[150px] left-[120px] z-0   !w-[500px]" />
+              <BlobUnderlay className="absolute top-[300px] left-[55%] z-0  !w-[30vw]" />
+              <BlobUnderlay className="absolute top-[800px] left-[20%] z-0 !w-[30vw]" />
+              <BlobUnderlay className="absolute top-[1000px] right-[15%] z-0  !w-[30vw]" />
+              <div className="max-w-[500px] rounded-4xl flex flex-col justify-center items-center gap-8 text-[#060010] backdrop-blur-xl p-20 border-1  bg-white/5 border-[#625970]  ">
+                <div
+                  className="bg-[#d468fb67] text-[50px] rounded-2xl px-4 py-2.5"
+                  style={{
+                    boxShadow: "0px 0px 17px 0px #d468fb67",
+                  }}
+                >
+                  🏠
+                </div>
+                <h2 className="text-white font-bold text-3xl">
+                  Housing & Property
+                </h2>
+                <p className="text-white/65 text-2xl text-center">
+                  Registration, permits, property taxes, and housing support
+                  programs.
+                </p>
+              </div>
+              <div className="max-w-[500px] rounded-4xl flex flex-col justify-center items-center gap-8 text-[#060010] backdrop-blur-xl p-20 border-1  bg-white/5 border-[#625970]  ">
+                <div
+                  className="bg-[#d468fb67] text-[50px] rounded-2xl px-4 py-2.5"
+                  style={{
+                    boxShadow: "0px 0px 17px 0px #d468fb67",
+                  }}
+                >
+                  🚗
+                </div>
+                <h2 className="text-white font-bold text-3xl">
+                  Transportation
+                </h2>
+                <p className="text-white/65 text-2xl text-center">
+                  Road maintenance, public transport, parking permits, and
+                  infrastructure.
+                </p>
+              </div>
+              <div className="max-w-[500px] rounded-4xl flex flex-col justify-center items-center gap-8 text-[#060010] backdrop-blur-xl p-20 border-1  bg-white/5 border-[#625970]  ">
+                <div
+                  className="bg-[#d468fb67] text-[50px] rounded-2xl px-4 py-2.5"
+                  style={{
+                    boxShadow: "0px 0px 17px 0px #d468fb67",
+                  }}
+                >
+                  ♻️
+                </div>
+                <h2 className="text-white font-bold text-3xl">
+                  Waste Management
+                </h2>
+                <p className="text-white/65 text-2xl text-center">
+                  Garbage collection, recycling programs, and environmental
+                  initiatives.
+                </p>
+              </div>
+              <div className="max-w-[500px] rounded-4xl flex flex-col justify-center items-center gap-8 text-[#060010] backdrop-blur-xl p-20 border-1  bg-white/5 border-[#625970]  ">
+                <div
+                  className="bg-[#d468fb67] text-[50px] rounded-2xl px-4 py-2.5"
+                  style={{
+                    boxShadow: "0px 0px 17px 0px #d468fb67",
+                  }}
+                >
+                  💧
+                </div>
+                <h2 className="text-white font-bold text-3xl">
+                  Water & Utilities
+                </h2>
+                <p className="text-white/65 text-2xl text-center">
+                  Water supply, sewage, utility connections, and maintenance
+                  services.
+                </p>
+              </div>{" "}
+              <div className="max-w-[500px] rounded-4xl flex flex-col justify-center items-center gap-8 text-[#060010] backdrop-blur-xl p-20 border-1  bg-white/5 border-[#625970]  ">
+                <div
+                  className="bg-[#d468fb67] text-[50px] rounded-2xl px-4 py-2.5"
+                  style={{
+                    boxShadow: "0px 0px 17px 0px #d468fb67",
+                  }}
+                >
+                  🏫
+                </div>
+                <h2 className="text-white font-bold text-3xl">Education</h2>
+                <p className="text-white/65 text-2xl text-center">
+                  Schools, libraries, educational programs, and youth
+                  activities.
+                </p>
+              </div>
+              <div className="max-w-[500px] rounded-4xl flex flex-col justify-center items-center gap-8 text-[#060010] backdrop-blur-xl p-20 border-1  bg-white/5 border-[#2d2c2d]  ">
+                <div
+                  className="bg-[#d468fb67] text-[50px] rounded-2xl px-4 py-2.5"
+                  style={{
+                    boxShadow: "0px 0px 17px 0px #d468fb67",
+                  }}
+                >
+                  🏥
+                </div>
+                <h2 className="text-white font-bold text-3xl">Healthcare</h2>
+                <p className="text-white/65 text-2xl text-center">
+                  Medical facilities, emergency services, and health programs.
+                </p>
+              </div>
+            </div>
 
-        <Footer />
-      </div>
-    </ClickSpark>
-  </div>
-);
+            <h2 className=" pt-24 text-white text-7xl font-bold text-center text-shadow-lg pb-[100px]">
+              Our <span className="text-[#d468fb]">Impact</span>
+            </h2>
+            <MagicBento
+              textAutoHide={true}
+              enableStars={true}
+              enableSpotlight={true}
+              enableBorderGlow={true}
+              enableTilt={false}
+              enableMagnetism={false}
+              clickEffect={true}
+              spotlightRadius={300}
+              particleCount={12}
+              glowColor="132, 0, 255"
+            />
+          </section>
+          <div className="relative w-full pt-24 mb-32">
+            <div
+              style={{
+                width: "100vw",
+                position: "absolute",
+                overflow: "hidden",
+              }}
+            >
+              <LogoLoop
+                logos={techLogos}
+                speed={120}
+                direction="left"
+                logoHeight={48}
+                gap={40}
+                pauseOnHover
+                scaleOnHover
+                fadeOut
+                fadeOutColor="#ffffff"
+                ariaLabel="Technology partners"
+              />
+            </div>
+          </div>
+
+          <Footer />
+        </div>
+      </ClickSpark>
+    </div>
+  );
+};
 
 export default Home;
