@@ -1,24 +1,39 @@
 import { TbBackground } from "react-icons/tb";
 import CardNav from "./CardNav";
 import GradualBlur from "./GradualBlur";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
+
   const items = [
     {
       label: "About",
       bgColor: "#0D0716",
       textColor: "#fff",
       links: [
-        { label: "Company", ariaLabel: "About Company" },
-        { label: "Careers", ariaLabel: "About Careers" },
+        {
+          label: "Company",
+          ariaLabel: "About Company",
+          action: () => {
+            navigate("/about_us");
+          },
+        },
+        { label: "Village", ariaLabel: "About Village" },
       ],
     },
     {
-      label: "Projects",
+      label: "Services",
       bgColor: "#170D27",
       textColor: "#fff",
       links: [
-        { label: "Featured", ariaLabel: "Featured Projects" },
+        {
+          label: "Help",
+          ariaLabel: "Featured",
+          action: () => {
+            navigate("/contact_us");
+          },
+        },
         { label: "Case Studies", ariaLabel: "Project Case Studies" },
       ],
     },
@@ -27,6 +42,7 @@ const Header = () => {
       bgColor: "#271E37",
       textColor: "#fff",
       links: [
+        { label: "Phone", ariaLabel: "Phone us" },
         { label: "Email", ariaLabel: "Email us" },
         { label: "Twitter", ariaLabel: "Twitter" },
         { label: "LinkedIn", ariaLabel: "LinkedIn" },

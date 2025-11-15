@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, type FC, type JSX } from "react";
+import { useEffect, useRef, useState, type FC, type JSX } from "react";
 import GlareHover from "./GlareHover";
 
 interface FlipCardProps {
