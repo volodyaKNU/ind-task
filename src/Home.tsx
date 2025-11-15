@@ -6,8 +6,11 @@ import { BlobUnderlay } from "./components/Blob";
 import MagicBento from "./components/MagicBento";
 import LogoLoop from "./components/LogoLoop";
 import ClickSpark from "./components/ClickSpark";
+import SplitText from "./components/SplitText";
 import { SiReact, SiNextdotjs } from "react-icons/si";
 import Footer from "./components/Footer";
+import ShinyText from "./components/ShinyText";
+import FlipCard from "./components/FlippedCard";
 
 const techLogos = [
   // Дія
@@ -123,7 +126,7 @@ const Home = () => {
             mixBlendMode="lighten"
           />
 
-          <div className="w-full flex flex-col items-center justify-center absolute top-[55%] translate-y-[-50%] text-white pointer-events-none ">
+          <div className="w-full flex flex-col items-center justify-center absolute top-[50%] lg:top-[55%] translate-y-[-50%] text-white pointer-events-none ">
             <AnimatedContent
               distance={150}
               direction="vertical"
@@ -136,9 +139,9 @@ const Home = () => {
               threshold={0.2}
               delay={0.3}
             >
-              <div className="flex gap-x-2 p-4 rounded-full items-center px-7 mb-5 backdrop-blur-md border-1 bg-white/5 border-[#625970]">
+              <div className="flex gap-x-2 p-3 xl:p-4  rounded-full items-center px-5 xl:px-7 mb-14 lg:mb-5 backdrop-blur-md border-1 bg-white/5 border-[#625970]">
                 <TbBackground />
-                <div className="text-shadow-lg text-xl font-semibold">
+                <div className="text-shadow-lg text-lg xl:text-xl font-semibold">
                   Government structure
                 </div>
               </div>
@@ -155,7 +158,7 @@ const Home = () => {
               threshold={0.2}
               delay={0.3}
             >
-              <div className="max-w-[1200px] text-8xl font-bold text-center text-shadow-lg">
+              <div className="md:max-w-[650px] lg:max-w-[900px] xl:max-w-[1200px] text-5xl lg:text-6xl xl:text-8xl font-bold text-center text-shadow-lg">
                 .<span className="text-[#d468fb]">MANAGE</span> DOCUMENTS WITH
                 OUR SYSTEM FROM{" "}
                 <span className="text-[#d468fb]">EVERYWHERE</span>!
@@ -173,11 +176,11 @@ const Home = () => {
               threshold={0.2}
               delay={0.3}
             >
-              <div className="w-full p-10 pt-20 flex gap-36 justify-center">
-                <button className="text-shadow-lg text-2xl font-semibold pointer-events-auto rounded-full text-[#060010] backdrop-blur-sm  p-4 px-20 border-1 bg-white/80  cursor-pointer hover:bg-white/80 transition-all duration-300 hover:text-[#060010]">
+              <div className="w-full  p-10 xl:pt-20 flex max-sm:flex-col gap-14 lg:gap-36 justify-center">
+                <button className="text-shadow-lg text-base lg:text-lg xl:text-2xl font-semibold pointer-events-auto rounded-full text-[#060010] backdrop-blur-sm  p-3 px-16 xl:p-4 xl:px-20 border-1 bg-white/80  cursor-pointer hover:bg-white/80 transition-all duration-300 hover:text-[#060010]">
                   Get Started
                 </button>
-                <button className=" text-shadow-lg text-2xl font-semibold pointer-events-auto rounded-full backdrop-blur-sm  p-4 px-20 border-1 bg-white/5 border-[#625970]  cursor-pointer hover:bg-white/80 transition-all duration-300 hover:text-[#060010]">
+                <button className=" text-shadow-lg lg:text-lg xl:text-2xl font-semibold pointer-events-auto rounded-full backdrop-blur-sm p-3 px-16 xl:p-4 xl:px-20 border-1 bg-white/5 border-[#625970]  cursor-pointer hover:bg-white/80 transition-all duration-300 hover:text-[#060010]">
                   Learn More
                 </button>
               </div>
@@ -192,119 +195,272 @@ const Home = () => {
               overflow: "hidden",
             }}
           >
-            <h2 className=" pt-24 text-white text-7xl font-bold text-center text-shadow-lg">
-              Our Services!
-            </h2>
-            <p className="text-white/65 text-center pt-7 pb-11 text-3xl">
-              Comprehensive municipal services for all residents
+            <div className="flex justify-center">
+              <SplitText
+                text="Our Services!"
+                className="pt-24 text-white text-3xl md:text-5xl lg:text-7xl font-bold text-center text-shadow-lg"
+                delay={100}
+                duration={0.6}
+                ease="power3.out"
+                splitType="chars"
+                from={{ opacity: 0, y: 40 }}
+                to={{ opacity: 1, y: 0 }}
+                threshold={0.1}
+                rootMargin="-100px"
+                textAlign="center"
+              />
+            </div>
+            <p className="text-white/65 text-center pt-1.5 md:pt-7 pb-11 text-3xl">
+              <ShinyText
+                className="text-xl md:text-2xl xl:!text-3xl"
+                text="Comprehensive municipal services for all residents"
+              />
             </p>
-            <div className="w-full  flex justify-center gap-12 pb-20 flex-wrap">
+
+            <div className="w-full flex justify-center gap-4 md:gap-12 pb-20 items-stretch flex-wrap">
               <BlobUnderlay className="absolute top-[150px] left-[120px] z-0   !w-[500px]" />
               <BlobUnderlay className="absolute top-[300px] left-[55%] z-0  !w-[30vw]" />
               <BlobUnderlay className="absolute top-[800px] left-[20%] z-0 !w-[30vw]" />
               <BlobUnderlay className="absolute top-[1000px] right-[15%] z-0  !w-[30vw]" />
-              <div className="max-w-[500px] rounded-4xl flex flex-col justify-center items-center gap-8 text-[#060010] backdrop-blur-xl p-20 border-1  bg-white/5 border-[#625970]  ">
-                <div
-                  className="bg-[#d468fb67] text-[50px] rounded-2xl px-4 py-2.5"
-                  style={{
-                    boxShadow: "0px 0px 17px 0px #d468fb67",
-                  }}
-                >
-                  🏠
-                </div>
-                <h2 className="text-white font-bold text-3xl">
-                  Housing & Property
-                </h2>
-                <p className="text-white/65 text-2xl text-center">
-                  Registration, permits, property taxes, and housing support
-                  programs.
-                </p>
-              </div>
-              <div className="max-w-[500px] rounded-4xl flex flex-col justify-center items-center gap-8 text-[#060010] backdrop-blur-xl p-20 border-1  bg-white/5 border-[#625970]  ">
-                <div
-                  className="bg-[#d468fb67] text-[50px] rounded-2xl px-4 py-2.5"
-                  style={{
-                    boxShadow: "0px 0px 17px 0px #d468fb67",
-                  }}
-                >
-                  🚗
-                </div>
-                <h2 className="text-white font-bold text-3xl">
-                  Transportation
-                </h2>
-                <p className="text-white/65 text-2xl text-center">
-                  Road maintenance, public transport, parking permits, and
-                  infrastructure.
-                </p>
-              </div>
-              <div className="max-w-[500px] rounded-4xl flex flex-col justify-center items-center gap-8 text-[#060010] backdrop-blur-xl p-20 border-1  bg-white/5 border-[#625970]  ">
-                <div
-                  className="bg-[#d468fb67] text-[50px] rounded-2xl px-4 py-2.5"
-                  style={{
-                    boxShadow: "0px 0px 17px 0px #d468fb67",
-                  }}
-                >
-                  ♻️
-                </div>
-                <h2 className="text-white font-bold text-3xl">
-                  Waste Management
-                </h2>
-                <p className="text-white/65 text-2xl text-center">
-                  Garbage collection, recycling programs, and environmental
-                  initiatives.
-                </p>
-              </div>
-              <div className="max-w-[500px] rounded-4xl flex flex-col justify-center items-center gap-8 text-[#060010] backdrop-blur-xl p-20 border-1  bg-white/5 border-[#625970]  ">
-                <div
-                  className="bg-[#d468fb67] text-[50px] rounded-2xl px-4 py-2.5"
-                  style={{
-                    boxShadow: "0px 0px 17px 0px #d468fb67",
-                  }}
-                >
-                  💧
-                </div>
-                <h2 className="text-white font-bold text-3xl">
-                  Water & Utilities
-                </h2>
-                <p className="text-white/65 text-2xl text-center">
-                  Water supply, sewage, utility connections, and maintenance
-                  services.
-                </p>
-              </div>{" "}
-              <div className="max-w-[500px] rounded-4xl flex flex-col justify-center items-center gap-8 text-[#060010] backdrop-blur-xl p-20 border-1  bg-white/5 border-[#625970]  ">
-                <div
-                  className="bg-[#d468fb67] text-[50px] rounded-2xl px-4 py-2.5"
-                  style={{
-                    boxShadow: "0px 0px 17px 0px #d468fb67",
-                  }}
-                >
-                  🏫
-                </div>
-                <h2 className="text-white font-bold text-3xl">Education</h2>
-                <p className="text-white/65 text-2xl text-center">
-                  Schools, libraries, educational programs, and youth
-                  activities.
-                </p>
-              </div>
-              <div className="max-w-[500px] rounded-4xl flex flex-col justify-center items-center gap-8 text-[#060010] backdrop-blur-xl p-20 border-1  bg-white/5 border-[#2d2c2d]  ">
-                <div
-                  className="bg-[#d468fb67] text-[50px] rounded-2xl px-4 py-2.5"
-                  style={{
-                    boxShadow: "0px 0px 17px 0px #d468fb67",
-                  }}
-                >
-                  🏥
-                </div>
-                <h2 className="text-white font-bold text-3xl">Healthcare</h2>
-                <p className="text-white/65 text-2xl text-center">
-                  Medical facilities, emergency services, and health programs.
-                </p>
-              </div>
+
+              <FlipCard
+                front={
+                  <>
+                    <div
+                      className="bg-[#d468fb67] md:text-[24px] lg:text-[35px] xl:text-[50px] rounded-2xl px-4 py-2.5"
+                      style={{
+                        boxShadow: "0px 0px 17px 0px #d468fb67",
+                      }}
+                    >
+                      🏠
+                    </div>
+                    <h2 className="text-white font-bold text-lg lg:text-2xl xl:text-3xl">
+                      Housing & Property
+                    </h2>
+                    <p className="text-white/65 text-base lg:text-lg xl:text-2xl text-center">
+                      Registration, permits, property taxes, and housing support
+                      programs.
+                    </p>
+                  </>
+                }
+                back={
+                  <>
+                    {" "}
+                    <p className="text-white/65 md:text-lg lg:text-2xl text-center">
+                      Manage your property documents, check taxes, and apply for
+                      renovations.
+                    </p>
+                    <button className="px-5 py-3 text-white/95 flex items-center cursor-pointer rounded-2xl bg-[#d468fb67]">
+                      {"Open services"}
+                    </button>
+                  </>
+                }
+                classname="max-w-[500px]"
+              />
+              <FlipCard
+                front={
+                  <>
+                    <div
+                      className="bg-[#d468fb67] md:text-[24px] lg:text-[35px] xl:text-[50px] rounded-2xl px-4 py-2.5"
+                      style={{
+                        boxShadow: "0px 0px 17px 0px #d468fb67",
+                      }}
+                    >
+                      🚗
+                    </div>
+                    <h2 className="text-white font-bold text-lg lg:text-2xl xl:text-3xl">
+                      Transportation
+                    </h2>
+                    <p className="text-white/65 text-base lg:text-lg xl:text-2xl text-center">
+                      Road maintenance, public transport, parking permits, and
+                      infrastructure.
+                    </p>
+                  </>
+                }
+                back={
+                  <>
+                    {" "}
+                    <p className="text-white/65 md:text-lg lg:text-2xl text-center">
+                      Report road issues, check public transport routes, manage
+                      parking permits, and track infrastructure work in your
+                      area.
+                    </p>
+                    <button className="px-5 py-3 text-white/95 flex items-center cursor-pointer rounded-2xl bg-[#d468fb67]">
+                      {"Open services"}
+                    </button>
+                  </>
+                }
+                classname="max-w-[500px]"
+              />
+              <FlipCard
+                front={
+                  <>
+                    <div
+                      className="bg-[#d468fb67] md:text-[24px] lg:text-[35px] xl:text-[50px] rounded-2xl px-4 py-2.5"
+                      style={{
+                        boxShadow: "0px 0px 17px 0px #d468fb67",
+                      }}
+                    >
+                      ♻️
+                    </div>
+                    <h2 className="text-white font-bold text-lg lg:text-2xl xl:text-3xl">
+                      Waste Management
+                    </h2>
+                    <p className="text-white/65 text-base lg:text-lg xl:text-2xl text-center">
+                      Garbage collection, recycling programs, and environmental
+                      initiatives.
+                    </p>
+                  </>
+                }
+                back={
+                  <>
+                    {" "}
+                    <p className="text-white/65 md:text-lg lg:text-2xl text-center">
+                      Manage garbage collection schedules, request recycling
+                      bins, report missed pickups, and explore local
+                      eco-initiatives.
+                    </p>
+                    <button className="px-5 py-3 text-white/95 flex items-center cursor-pointer rounded-2xl bg-[#d468fb67]">
+                      {"Open services"}
+                    </button>
+                  </>
+                }
+                classname="max-w-[500px]"
+              />
+              <FlipCard
+                front={
+                  <>
+                    <div
+                      className="bg-[#d468fb67] md:text-[24px] lg:text-[35px] xl:text-[50px] rounded-2xl px-4 py-2.5"
+                      style={{
+                        boxShadow: "0px 0px 17px 0px #d468fb67",
+                      }}
+                    >
+                      💧
+                    </div>
+                    <h2 className="text-white font-bold text-lg lg:text-2xl xl:text-3xl">
+                      Water & Utilities
+                    </h2>
+                    <p className="text-white/65 text-base lg:text-lg xl:text-2xl text-center">
+                      Water supply, sewage, utility connections, and maintenance
+                      services.
+                    </p>
+                  </>
+                }
+                back={
+                  <>
+                    {" "}
+                    <p className="text-white/65 md:text-lg lg:text-2xl text-center">
+                      Check service status, report leaks or outages, request new
+                      connections, and manage utility-related support.
+                    </p>
+                    <button className="px-5 py-3 text-white/95 flex items-center cursor-pointer rounded-2xl bg-[#d468fb67]">
+                      {"Open services"}
+                    </button>
+                  </>
+                }
+                classname="max-w-[500px]"
+              />
+              <FlipCard
+                front={
+                  <>
+                    <div
+                      className="bg-[#d468fb67] md:text-[24px] lg:text-[35px] xl:text-[50px] rounded-2xl px-4 py-2.5"
+                      style={{
+                        boxShadow: "0px 0px 17px 0px #d468fb67",
+                      }}
+                    >
+                      🏫
+                    </div>
+                    <h2 className="text-white font-bold text-lg lg:text-2xl xl:text-3xl">
+                      Education
+                    </h2>
+                    <p className="text-white/65 text-base lg:text-lg xl:text-2xl text-center">
+                      Schools, libraries, educational programs, and youth
+                      activities.
+                    </p>
+                  </>
+                }
+                back={
+                  <>
+                    {" "}
+                    <p className="text-white/65 md:text-lg lg:text-2xl text-center">
+                      Explore schools and libraries, join youth programs, and
+                      discover learning opportunities for all age groups.
+                    </p>
+                    <button className="px-5 py-3 text-white/95 flex items-center cursor-pointer rounded-2xl bg-[#d468fb67]">
+                      {"Open services"}
+                    </button>
+                  </>
+                }
+                classname="max-w-[500px]"
+              />
+
+              <FlipCard
+                front={
+                  <>
+                    <div
+                      className="bg-[#d468fb67] md:text-[24px] lg:text-[35px] xl:text-[50px] rounded-2xl px-4 py-2.5"
+                      style={{
+                        boxShadow: "0px 0px 17px 0px #d468fb67",
+                      }}
+                    >
+                      🏥
+                    </div>
+                    <h2 className="text-white font-bold text-lg lg:text-2xl xl:text-3xl">
+                      Healthcare
+                    </h2>
+                    <p className="text-white/65 text-base lg:text-lg xl:text-2xl text-center">
+                      Medical facilities, emergency services, and health
+                      programs.
+                    </p>
+                  </>
+                }
+                back={
+                  <>
+                    {" "}
+                    <p className="text-white/65 md:text-lg lg:text-2xl text-center">
+                      Find medical facilities, access emergency contacts, view
+                      health programs, and get support for you and your family.
+                    </p>
+                    <button className="px-5 py-3 text-white/95 flex items-center cursor-pointer rounded-2xl bg-[#d468fb67]">
+                      {"Open services"}
+                    </button>
+                  </>
+                }
+                classname="max-w-[500px]"
+              />
             </div>
 
-            <h2 className=" pt-24 text-white text-7xl font-bold text-center text-shadow-lg pb-[100px]">
-              Our <span className="text-[#d468fb]">Impact</span>
-            </h2>
+            <div className="flex justify-center gap-2 pb-12">
+              <SplitText
+                text="Our"
+                className=" pt-6 md:pt-24 text-white text-3xl md:text-5xl lg:text-7xl font-bold text-center text-shadow-lg"
+                delay={100}
+                duration={0.6}
+                ease="power3.out"
+                splitType="chars"
+                from={{ opacity: 0, y: 40 }}
+                to={{ opacity: 1, y: 0 }}
+                threshold={0.1}
+                rootMargin="-100px"
+                textAlign="center"
+              />
+              <SplitText
+                text="Impact"
+                className="pt-6 text-[#d468fb] text-3xl md:text-5xl lg:text-7xl font-bold text-center text-shadow-lg"
+                delay={100}
+                duration={0.6}
+                ease="power3.out"
+                splitType="chars"
+                from={{ opacity: 0, y: 40 }}
+                to={{ opacity: 1, y: 0 }}
+                threshold={0.1}
+                rootMargin="-100px"
+                textAlign="center"
+              />
+            </div>
+
             <MagicBento
               textAutoHide={true}
               enableStars={true}
@@ -318,7 +474,7 @@ const Home = () => {
               glowColor="132, 0, 255"
             />
           </section>
-          <div className="relative w-full pt-24 mb-32">
+          <div className="relative w-full pt-12 md:pt-24 mb-32">
             <div
               style={{
                 width: "100vw",

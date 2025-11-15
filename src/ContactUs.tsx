@@ -11,7 +11,7 @@ import { useState } from "react";
 const ContactUs = () => {
   const [activeIssue, setActiveIssue] = useState<number | null>(null);
   const [selectedPriority, setSelectedPriority] = useState("");
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
   const [referenceNumber, setReferenceNumber] = useState("");
   const [uploadedFiles, setUploadedFiles] = useState([]);
   const [formData, setFormData] = useState({

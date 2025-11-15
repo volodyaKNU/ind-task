@@ -49,7 +49,7 @@ const Header = () => {
           logo={
             <div className="flex gap-3 items-center text-lg">
               <TbBackground />
-              <h2>Govermment structure</h2>
+              <h2>Village Council</h2>
             </div>
           }
           logoAlt="Company Logo"
@@ -59,7 +59,7 @@ const Header = () => {
           buttonBgColor="#fff"
           buttonTextColor="#000"
           ease="power3.out"
-          className="pt-3"
+          className="px-8 pt-3 w-full"
         />
 
         {/* <button className="flex items-center gap-4 bg-[#d468fb] rounded-4xl text-md p-2 pl-5 cursor-pointer">
