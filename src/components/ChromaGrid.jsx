@@ -17,15 +17,6 @@ const ChromaGrid = ({
 
   const demo = [
     {
-      image: "https://i.pravatar.cc/300?img=15",
-      title: "Taras Holub",
-      subtitle: "Infrastructure Inspector",
-      handle: "@taras_h",
-      borderColor: "#d468fb",
-      gradient: "linear-gradient(145deg,#d468fb,#000000)",
-      url: "https://gov.ua/",
-    },
-    {
       image: "https://i.pravatar.cc/300?img=32",
       title: "Natalia Borysenko",
       subtitle: "Administrative Services Clerk",
@@ -43,6 +34,16 @@ const ChromaGrid = ({
       gradient: "linear-gradient(165deg,#ff68e6,#33001f)",
       url: "https://gov.ua/",
     },
+    {
+      image: "https://i.pravatar.cc/300?img=15",
+      title: "Taras Holub",
+      subtitle: "Infrastructure Inspector",
+      handle: "@taras_h",
+      borderColor: "#d468fb",
+      gradient: "linear-gradient(145deg,#d468fb,#000000)",
+      url: "https://gov.ua/",
+    },
+
     {
       image: "https://i.pravatar.cc/300?img=47",
       title: "Maksym Hrytsenko",

@@ -83,7 +83,7 @@ const Footer = () => {
           <div className="flex mt-7 gap-x-1.5">
             <input
               placeholder="exmaple@mail.com"
-              className=" bg-white/15 min-w-[250px] border-1 rounded-l-2xl p-2 px-3.5 text-white/90 font-light border-[#625970]"
+              className=" bg-white/15 w-max md:min-w-[250px] border-1 rounded-l-2xl p-2 px-3.5 text-white/90 font-light border-[#625970]"
             />
             <button
               className="px-5 text-white/95 flex items-center cursor-pointer rounded-r-2xl bg-[#d468fb]
