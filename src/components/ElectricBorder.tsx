@@ -93,7 +93,8 @@ const ElectricBorder: React.FC<ElectricBorderProps> = ({
   return (
     <div
       className={
-        "relative isolate backdrop-blur-xl p-12 bg-white/5 " + (className ?? "")
+        "relative isolate backdrop-blur-xl p-3.5 p-6 md:p-12 bg-white/5 " +
+        (className ?? "")
       }
       style={style}
     >

@@ -5,6 +5,8 @@ import ClickSpark from "./components/ClickSpark";
 import Footer from "./components/Footer";
 import ColorBends from "./components/ColorBends";
 import ElectricBorder from "./components/ElectricBorder";
+import SplitText from "./components/SplitText";
+import ShinyText from "./components/ShinyText";
 import { BlobUnderlay } from "./components/Blob";
 import { useState } from "react";
 
@@ -78,6 +80,15 @@ const ContactUs = () => {
     setUploadedFiles([]);
   };
 
+  const issues = [
+    { id: 1, icon: "🛣️", title: "Roads & Infrastructure" },
+    { id: 2, icon: "💡", title: "Utilities" },
+    { id: 3, icon: "♻️", title: "Waste Management" },
+    { id: 4, icon: "🚨", title: "Public Safety" },
+    { id: 5, icon: "🌳", title: "Parks & Recreation" },
+    { id: 6, icon: "📋", title: "Other" },
+  ];
+
   return (
     <div className="font-sans w-full max-w-screen overflow-hidden bg-[#060010]">
       <ClickSpark
@@ -124,9 +135,9 @@ const ContactUs = () => {
               threshold={0.2}
               delay={0.3}
             >
-              <div className="flex gap-x-2 p-4 rounded-full items-center px-7 mb-5 backdrop-blur-md border-1 bg-white/5 border-[#625970]">
+              <div className="flex gap-x-2 p-3 xl:p-4  rounded-full items-center px-5 xl:px-7 mb-14 lg:mb-5 backdrop-blur-md border-1 bg-white/5 border-[#625970]">
                 <TbBackground />
-                <div className="text-shadow-lg text-xl font-semibold">
+                <div className="text-shadow-lg text-lg xl:text-xl font-semibold">
                   Government structure
                 </div>
               </div>
@@ -143,7 +154,7 @@ const ContactUs = () => {
               threshold={0.2}
               delay={0.3}
             >
-              <div className="max-w-[1200px] text-8xl font-bold text-center text-shadow-lg">
+              <div className="md:max-w-[650px] lg:max-w-[900px] xl:max-w-[1200px] text-5xl lg:text-6xl xl:text-8xl font-bold text-center text-shadow-lg">
                 LET`S BUILD <span className="text-[#d468fb]">DREAM</span>{" "}
                 TOGETHER
               </div>
@@ -160,7 +171,7 @@ const ContactUs = () => {
               threshold={0.2}
               delay={0.3}
             >
-              <div className="w-full p-10 pt-20 flex gap-36 justify-center">
+              <div className="w-full  p-10 xl:pt-20 flex max-sm:flex-col gap-14 lg:gap-36 justify-center">
                 <button
                   onClick={() => {
                     window.scrollBy({
@@ -168,11 +179,11 @@ const ContactUs = () => {
                       behavior: "smooth",
                     });
                   }}
-                  className="text-shadow-lg text-2xl font-semibold pointer-events-auto rounded-full text-[#060010] backdrop-blur-sm  p-4 px-20 border-1 bg-white/80  cursor-pointer hover:bg-white/80 transition-all duration-300 hover:text-[#060010]"
+                  className="text-shadow-lg text-base lg:text-lg xl:text-2xl font-semibold pointer-events-auto rounded-full text-[#060010] backdrop-blur-sm  p-3 px-16 xl:p-4 xl:px-20 border-1 bg-white/80  cursor-pointer hover:bg-white/80 transition-all duration-300 hover:text-[#060010]"
                 >
                   Resolve
                 </button>
-                <button className=" text-shadow-lg text-2xl font-semibold pointer-events-auto rounded-full backdrop-blur-sm  p-4 px-20 border-1 bg-white/5 border-[#625970]  cursor-pointer hover:bg-white/80 transition-all duration-300 hover:text-[#060010]">
+                <button className=" text-shadow-lg lg:text-lg xl:text-2xl font-semibold pointer-events-auto rounded-full backdrop-blur-sm p-3 px-16 xl:p-4 xl:px-20 border-1 bg-white/5 border-[#625970]  cursor-pointer hover:bg-white/80 transition-all duration-300 hover:text-[#060010]">
                   Get Number
                 </button>
               </div>
@@ -187,102 +198,66 @@ const ContactUs = () => {
               overflow: "hidden",
             }}
           >
-            <h2 className=" pt-12 text-white text-7xl font-bold mx-auto max-w-[1200px] text-center text-shadow-lg">
-              Report an Issue
-            </h2>
-            <p className="text-white/60 cursor-pointer  mx-auto max-w-[1200px] text-center pt-3.5 text-xl ">
-              We're here to help! Report any problems or concerns in your
+            <div className="flex justify-center">
+              <SplitText
+                text="  Report an Issue"
+                className="pt-24 text-white text-3xl md:text-5xl lg:text-7xl font-bold text-center text-shadow-lg"
+                delay={100}
+                duration={0.6}
+                ease="power3.out"
+                splitType="chars"
+                from={{ opacity: 0, y: 40 }}
+                to={{ opacity: 1, y: 0 }}
+                threshold={0.1}
+                rootMargin="-100px"
+                textAlign="center"
+              />
+            </div>
+            <p className="text-white/65 text-center pt-1.5 md:pt-7 p-3.5 pb-11 text-3xl">
+              <ShinyText
+                className="text-xl md:text-2xl xl:!text-3xl"
+                text=" We're here to help! Report any problems or concerns in your
               community, and our team will work quickly to resolve them. Your
-              feedback helps us maintain and improve our village.
+              feedback helps us maintain and improve our village."
+              />
             </p>
 
-            <h3 className=" pt-12 text-white text-4xl font-bold mx-auto max-w-[1200px] text-center text-shadow-lg">
+            <h3 className="pt-6 md:pt-12 text-white text-2xl lg:text-4xl font-bold mx-auto max-w-[1200px] text-center text-shadow-lg">
               Select Issue Category
             </h3>
-            <div className="w-full max-w-[1500px] mx-auto mt-14 flex justify-center gap-12 pb-20 flex-wrap">
+            <div className="w-full max-w-[1500px] mx-auto mt-14 flex justify-center flex-wrap gap-4 sm:gap-8 md:gap-12 pb-9 md:pb-20">
               <BlobUnderlay className="absolute top-[400px] left-[1%] z-0 !w-[500px]" />
               <BlobUnderlay className="absolute top-[500px] right-[1%] z-0 !w-[30vw]" />
 
-              <div
-                onClick={() => {
-                  setActiveIssue(1);
-                }}
-                className={` ${
-                  activeIssue === 1 && "border-[#d468fb] !bg-[#d468fb]/20"
-                } w-[275px] h-[225px] rounded-4xl flex flex-col justify-center items-center gap-8 text-[#060010] backdrop-blur-xl p-7 border-1  bg-white/5 border-[#625970] hover:-translate-y-3 transition-all ease-in-out duration-300 cursor-pointer`}
-              >
-                <div className="text-[40px]">🛣️</div>
-                <h2 className="text-white text-center font-bold text-xl">
-                  Roads & Infrastructure
-                </h2>
-              </div>
-              <div
-                onClick={() => {
-                  setActiveIssue(2);
-                }}
-                className={` ${
-                  activeIssue === 2 && "border-[#d468fb] !bg-[#d468fb]/20"
-                }  w-[275px] h-[225px] rounded-4xl flex flex-col justify-center items-center gap-8 text-[#060010] backdrop-blur-xl p-7 border-1  bg-white/5 border-[#625970]  hover:-translate-y-3 transition-all ease-in-out duration-300 cursor-pointer`}
-              >
-                <div className="text-[40px]">💡</div>
-                <h2 className="text-white text-center font-bold text-xl">
-                  Utilities
-                </h2>
-              </div>
-              <div
-                onClick={() => {
-                  setActiveIssue(3);
-                }}
-                className={` ${
-                  activeIssue === 3 && "border-[#d468fb] !bg-[#d468fb]/20"
-                }  w-[275px] h-[225px] rounded-4xl flex flex-col justify-center items-center gap-8 text-[#060010] backdrop-blur-xl p-7 border-1  bg-white/5 border-[#625970]  hover:-translate-y-3 transition-all ease-in-out duration-300 cursor-pointer`}
-              >
-                <div className="text-[40px]">♻️</div>
-                <h2 className="text-white text-center font-bold text-xl">
-                  Waste Management
-                </h2>
-              </div>
-              <div
-                onClick={() => {
-                  setActiveIssue(4);
-                }}
-                className={` ${
-                  activeIssue === 4 && "border-[#d468fb] !bg-[#d468fb]/20"
-                }  w-[275px] h-[225px] rounded-4xl flex flex-col justify-center items-center gap-8 text-[#060010] backdrop-blur-xl p-7 border-1  bg-white/5 border-[#625970] hover:-translate-y-3 transition-all ease-in-out duration-300 cursor-pointer `}
-              >
-                <div className="text-[40px]">🚨</div>
-                <h2 className="text-white text-center font-bold text-xl">
-                  Public Safety
-                </h2>
-              </div>
-              <div
-                onClick={() => {
-                  setActiveIssue(5);
-                }}
-                className={` ${
-                  activeIssue === 5 && "border-[#d468fb] !bg-[#d468fb]/20"
-                }  w-[275px] h-[225px] rounded-4xl flex flex-col justify-center items-center gap-8 text-[#060010] backdrop-blur-xl p-7 border-1  bg-white/5 border-[#625970]  hover:-translate-y-3 transition-all ease-in-out duration-300 cursor-pointer`}
-              >
-                <div className="text-[40px]">🌳</div>
-                <h2 className="text-white text-center font-bold text-xl">
-                  Parks & Recreation
-                </h2>
-              </div>
-              <div
-                onClick={() => {
-                  setActiveIssue(6);
-                }}
-                className={` ${
-                  activeIssue === 6 && "border-[#d468fb] !bg-[#d468fb]/20"
-                }  w-[275px] h-[225px] rounded-4xl flex flex-col justify-center items-center gap-8 text-[#060010] backdrop-blur-xl p-7 border-1  bg-white/5 border-[#625970]  hover:-translate-y-3 transition-all ease-in-out duration-300 cursor-pointer`}
-              >
-                <div className="text-[40px]">📋</div>
-                <h2 className="text-white text-center font-bold text-xl">
-                  Other
-                </h2>
-              </div>
+              {issues.map((el) => {
+                const active = activeIssue === el.id;
+
+                return (
+                  <div
+                    onClick={() => setActiveIssue(el.id)}
+                    className={`
+                    ${active && "border-[#d468fb] !bg-[#d468fb]/20"} 
+                    h-[120px] w-[144px] 
+                    sm:h-[150px] sm:w-[180px] 
+                    md:w-[275px] md:h-[225px]  max-md:aspect-square 
+                    rounded-4xl flex flex-col justify-center 
+                    items-center gap-3 md:gap-8 text-[#060010] 
+                    backdrop-blur-xl max-md:p-3.5 p-7 border-1 bg-white/5 
+                  border-[#625970] hover:-translate-y-3 
+                    transition-all ease-in-out duration-300 cursor-pointer
+                  `}
+                  >
+                    <div className="text-[20px] sm:text-[35px] md:text-[40px]">
+                      {el.icon}
+                    </div>
+                    <h2 className="text-white text-center font-bold text-sm sm:text-lg md:text-xl">
+                      {el.title}
+                    </h2>
+                  </div>
+                );
+              })}
             </div>
-            <div className="max-w-[1000px] mx-auto pt-14 py-14 pb-28">
+            <div className="max-w-[1000px] px-3.5 mx-auto pt-7 md:pt-14 py-14 pb-16 md:pb-28">
               <ElectricBorder color="#9b4bb8" style={{ borderRadius: 16 }}>
                 <div className="p-2">
                   <h3 className=" text-white text-2xl font-bold mx-auto  text-shadow-lg">
@@ -292,7 +267,7 @@ const ContactUs = () => {
                     Please provide as much information as possible to help us
                     address your concern efficiently.
                   </p>
-                  <section id="report" className="pt-8 px-8 relative z-10">
+                  <section id="report" className="p-3.5 md:p-8 relative z-10">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                       {/* Full Name */}
                       <div>
@@ -409,7 +384,7 @@ const ContactUs = () => {
                                   : "border-white/10 hover:border-white/30"
                               }`}
                             >
-                              <div className="font-semibold mb-1">
+                              <div className="font-semibold text-white/90 mb-1">
                                 {priority.icon} {priority.level}
                               </div>
                               <div className="text-white/50 text-sm">
@@ -472,7 +447,7 @@ const ContactUs = () => {
                     <div className="mt-12 text-center">
                       <button
                         onClick={handleSubmit}
-                        className="px-12 py-5 bg-[#d468fb] text-[#060010] rounded-full text-lg font-bold transition-all duration-300 hover:translate-y-[-3px] hover:shadow-[0_15px_40px_rgba(212,104,251,0.6)] shadow-[0_10px_30px_rgba(212,104,251,0.4)]"
+                        className="px-6 py-2.5 md:px-12 md:py-5 bg-[#d468fb] text-[#060010] rounded-full text-base md:text-lg font-bold transition-all duration-300 hover:translate-y-[-3px] hover:shadow-[0_15px_40px_rgba(212,104,251,0.6)] shadow-[0_10px_30px_rgba(212,104,251,0.4)]"
                       >
                         Submit Report
                       </button>
