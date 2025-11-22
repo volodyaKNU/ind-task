@@ -26,6 +26,9 @@ const ContactUs = () => {
     notifications: true,
   });
 
+  const [showGetNumberModal, setShowGetNumberModal] = useState(false);
+  const [getNumberRef, setGetNumberRef] = useState("");
+
   const priorities = [
     { level: "Low", icon: "🟢", description: "Can wait a few weeks" },
     { level: "Medium", icon: "🟡", description: "Needs attention soon" },
@@ -88,6 +91,12 @@ const ContactUs = () => {
     { id: 5, icon: "🌳", title: "Parks & Recreation" },
     { id: 6, icon: "📋", title: "Other" },
   ];
+
+  const handleGetNumber = () => {
+    const refNumber = generateReferenceNumber();
+    setGetNumberRef(refNumber);
+    setShowGetNumberModal(true);
+  };
 
   return (
     <div className="font-sans w-full max-w-screen overflow-hidden bg-[#060010]">
@@ -183,7 +192,10 @@ const ContactUs = () => {
                 >
                   Resolve
                 </button>
-                <button className=" text-shadow-lg lg:text-lg xl:text-2xl font-semibold pointer-events-auto rounded-full backdrop-blur-sm p-3 px-16 xl:p-4 xl:px-20 border-1 bg-white/5 border-[#625970]  cursor-pointer hover:bg-white/80 transition-all duration-300 hover:text-[#060010]">
+                <button
+                  onClick={handleGetNumber}
+                  className=" text-shadow-lg lg:text-lg xl:text-2xl font-semibold pointer-events-auto rounded-full backdrop-blur-sm p-3 px-16 xl:p-4 xl:px-20 border-1 bg-white/5 border-[#625970]  cursor-pointer hover:bg-white/80 transition-all duration-300 hover:text-[#060010]"
+                >
                   Get Number
                 </button>
               </div>
@@ -485,6 +497,67 @@ const ContactUs = () => {
                 >
                   Got it!
                 </button>
+              </div>
+            </div>
+          )}
+
+          {showGetNumberModal && (
+            <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[2000] flex items-center justify-center p-4 sm:p-8">
+              <div
+                className="
+      w-full max-w-[92vw] sm:max-w-lg md:max-w-xl
+      bg-white/10 backdrop-blur-[30px]
+      rounded-[22px] sm:rounded-[30px]
+      border border-white/20
+      p-6 sm:p-10 md:p-12
+      text-center
+      animate-[modalAppear_0.3s_ease-out]
+    "
+              >
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-white">
+                  The Number
+                </h2>
+
+                <p className="text-white/70 leading-relaxed text-sm sm:text-base md:text-lg mb-6 sm:mb-8">
+                  You can call us any time
+                </p>
+
+                <div className="bg-[#d468fb]/20 border border-[#d468fb]/50 rounded-xl p-3 sm:p-4 mb-6 sm:mb-8">
+                  <div className="text-[#d468fb] text-xl sm:text-2xl md:text-3xl font-bold tracking-wide break-all">
+                    +380 465 789 846
+                  </div>
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+                  <button
+                    onClick={() => {
+                      navigator.clipboard?.writeText(getNumberRef);
+                    }}
+                    className="
+            w-full sm:w-auto px-8 py-3 sm:px-10 sm:py-4
+            bg-white/10 border border-white/20
+            text-white rounded-full font-semibold
+            transition-all duration-300
+            hover:bg-white/20 hover:translate-y-[-2px]
+          "
+                  >
+                    Copy Number
+                  </button>
+
+                  <button
+                    onClick={() => setShowGetNumberModal(false)}
+                    className="
+            w-full sm:w-auto px-8 py-3 sm:px-10 sm:py-4
+            bg-[#d468fb] text-[#060010]
+            rounded-full font-semibold
+            transition-all duration-300
+            hover:translate-y-[-2px]
+            hover:shadow-[0_10px_25px_rgba(212,104,251,0.4)]
+          "
+                  >
+                    Got it!
+                  </button>
+                </div>
               </div>
             </div>
           )}
