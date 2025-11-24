@@ -3,6 +3,7 @@ import Home from "./Home";
 import AboutUs from "./AboutUs";
 import ContactUs from "./ContactUs";
 import { useEffect } from "react";
+import Village from "./Village";
 
 function App() {
   const location = useLocation();
@@ -18,6 +19,7 @@ function App() {
     <Routes>
       <Route path="/contact_us" element={<ContactUs />} />
       <Route path="/about_us" element={<AboutUs />} />
+      <Route path="/village" element={<Village />} />
       <Route path="" element={<Home />} />
     </Routes>
   );

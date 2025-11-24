@@ -177,10 +177,26 @@ const Home = () => {
               delay={0.3}
             >
               <div className="w-full  p-10 xl:pt-20 flex max-sm:flex-col gap-14 lg:gap-36 justify-center">
-                <button className="text-shadow-lg text-base lg:text-lg xl:text-2xl font-semibold pointer-events-auto rounded-full text-[#060010] backdrop-blur-sm  p-3 px-16 xl:p-4 xl:px-20 border-1 bg-white/80  cursor-pointer hover:bg-white/80 transition-all duration-300 hover:text-[#060010]">
+                <button
+                  onClick={() => {
+                    window.scrollBy({
+                      top: window.innerHeight,
+                      behavior: "smooth",
+                    });
+                  }}
+                  className="text-shadow-lg text-base lg:text-lg xl:text-2xl font-semibold pointer-events-auto rounded-full text-[#060010] backdrop-blur-sm  p-3 px-16 xl:p-4 xl:px-20 border-1 bg-white/80  cursor-pointer hover:bg-white/80 transition-all duration-300 hover:text-[#060010]"
+                >
                   Get Started
                 </button>
-                <button className=" text-shadow-lg lg:text-lg xl:text-2xl font-semibold pointer-events-auto rounded-full backdrop-blur-sm p-3 px-16 xl:p-4 xl:px-20 border-1 bg-white/5 border-[#625970]  cursor-pointer hover:bg-white/80 transition-all duration-300 hover:text-[#060010]">
+                <button
+                  onClick={() => {
+                    window.scrollBy({
+                      top: window.innerHeight,
+                      behavior: "smooth",
+                    });
+                  }}
+                  className=" text-shadow-lg lg:text-lg xl:text-2xl font-semibold pointer-events-auto rounded-full backdrop-blur-sm p-3 px-16 xl:p-4 xl:px-20 border-1 bg-white/5 border-[#625970]  cursor-pointer hover:bg-white/80 transition-all duration-300 hover:text-[#060010]"
+                >
                   Learn More
                 </button>
               </div>
@@ -435,7 +451,7 @@ const Home = () => {
             <div className="flex justify-center gap-2 pb-12">
               <SplitText
                 text="Our"
-                className=" pt-6 md:pt-24 text-white text-3xl md:text-5xl lg:text-7xl font-bold text-center text-shadow-lg"
+                className=" pt-6 text-white/95 text-3xl md:text-5xl lg:text-7xl font-bold text-center text-shadow-lg"
                 delay={100}
                 duration={0.6}
                 ease="power3.out"

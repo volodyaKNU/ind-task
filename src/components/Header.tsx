@@ -19,7 +19,13 @@ const Header = () => {
             navigate("/about_us");
           },
         },
-        { label: "Village", ariaLabel: "About Village" },
+        {
+          label: "Village",
+          action: () => {
+            navigate("/village");
+          },
+          ariaLabel: "About Village",
+        },
       ],
     },
     {
