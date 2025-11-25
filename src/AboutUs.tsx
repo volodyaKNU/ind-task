@@ -52,9 +52,9 @@ const Home = () => {
               threshold={0.2}
               delay={0.3}
             >
-              <div className="flex gap-x-2 p-4 rounded-full items-center px-7 mb-5 backdrop-blur-md border-1 bg-white/5 border-[#625970]">
+              <div className="flex gap-x-2 p-3 xl:p-4  rounded-full items-center px-5 xl:px-7 mb-14 lg:mb-5 backdrop-blur-md border-1 bg-white/5 border-[#625970]">
                 <TbBackground />
-                <div className="text-shadow-lg text-xl font-semibold">
+                <div className="text-shadow-lg text-lg xl:text-xl font-semibold">
                   Government structure
                 </div>
               </div>

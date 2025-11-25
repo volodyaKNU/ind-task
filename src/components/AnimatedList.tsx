@@ -243,10 +243,12 @@ const AnimatedList: React.FC<AnimatedListProps> = ({
             }}
           >
             <div
-              className={` max-w-[900px] h-full rounded-4xl backface-hidden flex items-center gap-3 lg:gap-8 text-[#060010] backdrop-blur-3xl p-9  border-1  bg-white/5 border-[#625970] ${itemClassName}`}
+              className={` max-w-[900px] h-full rounded-4xl backface-hidden flex items-center gap-3 lg:gap-8 text-[#060010] backdrop-blur-3xl p-6 md:p-9  border-1  bg-white/5 border-[#625970] ${itemClassName}`}
             >
-              <div className="flex items-start gap-6">
-                <div className="text-6xl">{item.icon}</div>
+              <div className="flex items-start gap-3 lg:gap-6">
+                <div className="text-3xl sm:text-4xl md:text-6xl">
+                  {item.icon}
+                </div>
                 <div className="flex-grow">
                   <div className="flex items-center gap-3 mb-3">
                     <h3 className="text-2xl font-bold text-white/95">

@@ -194,7 +194,7 @@ const Home = () => {
               threshold={0.2}
               delay={0.3}
             >
-              <div className="md:max-w-[650px] lg:max-w-[900px] xl:max-w-[1200px] text-5xl lg:text-6xl xl:text-8xl font-bold text-center text-shadow-lg">
+              <div className="md:max-w-[650px] lg:max-w-[900px] xl:max-w-[1200px] text-5xl lg:text-6xl xl:text-8xl font-bold text-center text-shadow-lg px-4">
                 Rooted in <span className="text-[#d468fb]">Tradition,</span>{" "}
                 Lined Through Innovation
               </div>
@@ -240,7 +240,7 @@ const Home = () => {
         </div>
         <div className="max-w-screen h-fit bg-[#060010]">
           <section>
-            <div className="flex justify-center">
+            <div className="flex justify-center px-3">
               <SplitText
                 text="Some information about us!"
                 className="pt-24 text-white text-3xl md:text-5xl lg:text-7xl font-bold text-center text-shadow-lg"
@@ -257,7 +257,7 @@ const Home = () => {
             </div>
             <p className="text-white/65  text-center pt-1.5 md:pt-7 pb-11 text-3xl">
               <ShinyText
-                className="text-xl md:text-2xl xl:!text-3xl max-w-[1000px]"
+                className="text-xl px-4 md:text-2xl xl:!text-3xl max-w-[1000px]"
                 text="Where centuries of family bonds meet cutting-edge digital transformation. A community that honors its past while embracing the future."
               />
             </p>
@@ -399,7 +399,7 @@ const Home = () => {
 
                   {/* Business - Medium Rectangle */}
                   <div
-                    className="col-span-6 md:col-span-3 lg:col-span-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:border-[#d468fb]/50 transition-all hover:translate-y-[-5px] relative overflow-hidden group"
+                    className="col-span-6 md:col-span-3 lg:col-span-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-4 md:p-8 hover:border-[#d468fb]/50 transition-all hover:translate-y-[-5px] relative overflow-hidden group"
                     style={{ backgroundColor: "rgba(255, 255, 255, 0.05)" }}
                   >
                     <div className="absolute -bottom-3 -right-3 text-[90px] opacity-5 group-hover:opacity-10 transition-opacity">
@@ -627,13 +627,13 @@ const Home = () => {
 
               <div className="pt-42 ">
                 <div className="relative">
-                  <div className="absolute w-full px-11 h-[255px] -translate-y-[127px] flex justify-between gap-2.5">
+                  <div className="absolute w-full overflow-y-auto px-11 h-[255px] -translate-y-[127px] flex justify-between gap-2.5">
                     {timeline.map((item, i) => (
                       <div
                         key={i}
                         className={`flex flex-col ${
                           item.reverse ? "flex-col-reverse" : ""
-                        } items-center gap-2 cursor-pointer`}
+                        } items-center gap-2 cursor-pointer min-w-[200px]`}
                         onClick={() => {
                           setCurrentIndex(i);
                         }}
@@ -664,12 +664,16 @@ const Home = () => {
                     ))}
                   </div>
 
-                  <div className="w-full px-11 pb-52">
-                    <div className="bg-[#2b2634] h-0.5 " />
+                  <div
+                    className={`w-full  pb-52 min-w-[${
+                      200 * timeline.length
+                    }] `}
+                  >
+                    <div className={`bg-[#2b2634] w-full h-0.5 `} />
                   </div>
                 </div>
-                <div className="px-12 pb-24 flex justify-center">
-                  <div className=" max-w-[900px] h-full rounded-4xl backface-hidden flex items-center gap-3 lg:gap-8 text-[#060010] backdrop-blur-xl p-3 lg:p-20 border-1  bg-white/5 border-[#625970]">
+                <div className="md:px-12 px-4 pb-24 flex justify-center">
+                  <div className=" max-w-[900px] h-full rounded-4xl backface-hidden flex max-md:flex-col items-center gap-8 text-[#060010] backdrop-blur-xl p-7 md:p-10 lg:p-20 border-1  bg-white/5 border-[#625970]">
                     <div
                       className="relative  rounded-full   px-10 py-4"
                       style={{
@@ -682,8 +686,6 @@ const Home = () => {
                       <span className="text-xl  text-white">
                         {timeline[currentIndex].year}
                       </span>
-
-                      {/* Inner shine effect */}
                       <div className="absolute inset-[10px] rounded-full border-2 border-white/20"></div>
                     </div>
                     <div className="flex flex-col gap-4">
@@ -788,11 +790,19 @@ const Home = () => {
             </div>
 
             <div className="w-full mt-12 bg-[#130d1c] pb-10">
-              <div className="flex justify-between items-center gap-11 px-14">
-                <div className="min-w-[600px]">
+              <div
+                className="
+      flex 
+      flex-col lg:flex-row 
+      justify-between items-center 
+      gap-11 px-6 md:px-10 lg:px-14
+    "
+              >
+                {/* LEFT TEXT BLOCK */}
+                <div className="w-full lg:min-w-[500px] lg:w-1/2 text-center lg:text-left">
                   <SplitText
                     text="Did You Know?!"
-                    className="pt-24 text-white text-3xl md:text-5xl lg:text-7xl font-bold text-center text-shadow-lg"
+                    className="pt-11 lg:pt-24 text-white text-3xl md:text-5xl lg:text-7xl font-bold text-shadow-lg"
                     delay={100}
                     duration={0.6}
                     ease="power3.out"
@@ -801,40 +811,51 @@ const Home = () => {
                     to={{ opacity: 1, y: 0 }}
                     threshold={0.1}
                     rootMargin="-100px"
-                    textAlign="center"
                   />
-                  <p className="text-white/65 pt-1.5  pb-11 text-3xl">
-                    <ShinyText
-                      className="text-xl md:text-2xl xl:!text-3xl"
-                      text="Few facts about our village"
-                    />
+
+                  <p className="text-white/65 pt-1.5 pb-11 text-xl md:text-2xl xl:text-3xl">
+                    <ShinyText text="Few facts about our village" />
                   </p>
                 </div>
-                <div className="w-full flex items-center justify-end flex-wrap gap-24">
+
+                {/* FACTS BLOCK */}
+                <div
+                  className="
+        flex 
+        justify-center lg:justify-end 
+        gap-14 md:gap-20 xl:gap-24
+        w-full lg:w-1/2
+      "
+                >
+                  {/* ITEM */}
                   <div className="flex flex-col gap-5 items-center max-w-[200px]">
                     <div className="text-4xl">🌳</div>
                     <span className="px-3 py-1 bg-[#d468fb]/20 border border-[#d468fb]/50 rounded-full text-base font-semibold text-[#d468fb]">
                       350+
                     </span>
-                    <div className="text-xl text-white/95 text-center">
+                    <div className="text-lg md:text-xl text-white/95 text-center">
                       Trees planted annually in conservation program
                     </div>
                   </div>
+
+                  {/* ITEM */}
                   <div className="flex flex-col gap-5 items-center max-w-[200px]">
                     <div className="text-4xl">📚</div>
                     <span className="px-3 py-1 bg-[#d468fb]/20 border border-[#d468fb]/50 rounded-full text-base font-semibold text-[#d468fb]">
                       4,500+
                     </span>
-                    <div className="text-xl text-white/95 text-center">
+                    <div className="text-lg md:text-xl text-white/95 text-center">
                       Books in our public library collection
                     </div>
                   </div>
+
+                  {/* ITEM */}
                   <div className="flex flex-col gap-5 items-center max-w-[200px]">
                     <div className="text-4xl">🎨</div>
                     <span className="px-3 py-1 bg-[#d468fb]/20 border border-[#d468fb]/50 rounded-full text-base font-semibold text-[#d468fb]">
                       120+
                     </span>
-                    <div className="text-xl text-white/95 text-center">
+                    <div className="text-lg md:text-xl text-white/95 text-center">
                       Local artists and craftspeople
                     </div>
                   </div>
@@ -886,7 +907,7 @@ const Home = () => {
                 />
               </div>
             </div>
-            <div className="relative flex justify-center mt-28 mb-12 px-3.5">
+            <div className="relative flex justify-center mb-12 px-3.5">
               <BlobUnderlay className="absolute top-[45px] left-1/2 -translate-x-1/2 z-0 !h-[230px] !w-[500px]" />
               <div className="backdrop-blur-xl max-w-[1000px] w-full  rounded-4xl border-1 flex flex-col items-center  bg-white/5 border-[#625970] p-14 ">
                 <h2 className="  text-[#d468fb] text-4xl font-bold text-center text-shadow-lg max-md:text-2xl">

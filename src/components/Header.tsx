@@ -40,7 +40,13 @@ const Header = () => {
             navigate("/contact_us");
           },
         },
-        { label: "Case Studies", ariaLabel: "Project Case Studies" },
+        {
+          action: () => {
+            navigate("/contact_us");
+          },
+          label: "Case Studies",
+          ariaLabel: "Project Case Studies",
+        },
       ],
     },
     {
@@ -69,7 +75,12 @@ const Header = () => {
       <div className="relative max-w-[1200px] mx-auto p-3.5  flex justify-between text-white">
         <CardNav
           logo={
-            <div className="flex gap-3 items-center text-lg">
+            <div
+              className="flex gap-3 items-center text-lg"
+              onClick={() => {
+                navigate("/");
+              }}
+            >
               <TbBackground />
               <h2>Village Council</h2>
             </div>
